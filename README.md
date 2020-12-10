@@ -73,8 +73,6 @@ ML Studio with Scheduled Run\
 [Link to Screen Recording](https://drive.google.com/file/d/15Kepc-ELspkkJMJs-RpHteE58_3UWuiX/view?usp=sharing)
 
 ## Standout Suggestions
-To derive opportunites for improvement, we could cross-reference other projects that have analyzed this dataset, and note down the best practices. 
+To improve our model, we could further clean the data as this dataset contains outliers which may influence the accuracy of our predictions. When we are not using AutoML, we can manually pick out features that are most important to our prediction. We can consider using a library such as Boruta, which is a feature selection wrapper algorithm that works well with classification problem, to identify weak and/or irrelevant features that can be discarded. Thereafter, we would be left with a minimum set of features that is useful enough to represent the entire dataset and supplement with techniques like k-fold cross-validation to improve our model accuracy.
 
-One suggestion for the future would be to further clean the data as this dataset contains outliers which may influence the accuracy of our predictions. We can consider using a library such as Boruta, which is a feature selection wrapper algorithm that works well with classification problem, to identify features that can be dropped. Alternatively, we can also use the feature selection module available in Azure Machine Learning.
-
-Another suggestion to improve the undertaking of this project would be to leverage batch inference pipeline capabilities. By including a ParallelRunStep to our pipeline via the Azure SDK, we can distribute the workload tasks into mini-batches, which should help to reduce the processing time. This will allow us to perform operations and review results more quickly.
+To improve the undertaking of this project in Azure, we could leverage batch inference pipeline capabilities. By including a ParallelRunStep to our pipeline via the Azure SDK, we can distribute the workload tasks into mini-batches, which should help to reduce the processing time. This will allow us to perform operations and review results more quickly.
