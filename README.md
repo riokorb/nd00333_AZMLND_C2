@@ -1,6 +1,3 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
-
 # Operationalizing Machine Learning
 
 This project is part of the Udacity Azure ML Nanodegree. In this project, we will be working on with the Bank Marketing dataset, which contains data about the personal and financial details of customers in a Portugese bank, and the objective is to predict if the customer will subscribe to an advanced offering. We will use Microsoft Azure to configure a cloud-based machine learning production model, deploy it, and consume it. Afterwards, we will create, publish, and consume a pipeline.
@@ -76,4 +73,8 @@ ML Studio with Scheduled Run\
 [Link to Screen Recording](https://drive.google.com/file/d/15Kepc-ELspkkJMJs-RpHteE58_3UWuiX/view?usp=sharing)
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+To derive opportunites for improvement, we could cross-reference other projects that have analyzed this dataset, and note down the best practices. 
+
+One suggestion for the future would be to further clean the data as this dataset contains outliers which may influence the accuracy of our predictions. We can consider using a library such as Boruta, which is a feature selection wrapper algorithm that works well with classification problem, to identify features that can be dropped. Alternatively, we can also use the feature selection module available in Azure Machine Learning.
+
+Another suggestion to improve the undertaking of this project would be to leverage batch inference pipeline capabilities. By including a ParallelRunStep to our pipeline via the Azure SDK, we can distribute the workload tasks into mini-batches, which should help to reduce the processing time. This will allow us to perform operations and review results more quickly.
